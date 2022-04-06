@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box-container {
+            display: flex;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 0, 0.7);
+            border: 1px solid black;
+            color: black;
+        }
+
+        .box:hover {
+            /* width: 200px; height: 200px; => 타겟 변형에 따라 형제 요소들 모두 재배치*/
+            /* 변형 타겟 하나에 대해서만 리플로우 계산하므로 성능면에서도 레이아웃 면에서도 유리함 */
+
+            /* 1.스케일링 transform: scale(2) rotate(15deg); */
+
+            /* 2.비틀기 transform: skew(10deg) skewX(10deg) skewY(20deg); */
+
+            /* 3.이동 transform: translate(10px, 10px) translateX(10px) translateY(10px); */
+
+            /* 4.회전 transform: rotate(30deg); */
+
+            /* 4.기준점 변경 :default center / 50% 50%;
+            transform: scale(2); // 변형 예시
+            transform-origin: left top ;   40% 0%;*/
+        }
+    </style>
+</head>
+<div class="box-container">
+    <div class="box">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+    <div class="box">D</div>
+    <div class="box">E</div>
+</div>
+
+<body>
+    <h1>CSS Transform</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quam enim, repellendus cupiditate fugit
+        voluptatum excepturi explicabo provident officiis aspernatur in, ex quos suscipit velit doloribus optio a iure
+        labore? Laudantium delectus architecto quia impedit dolorum maxime ipsum ut id ratione deleniti excepturi
+        facilis, quidem saepe illum ullam recusandae aperiam ipsam debitis. Inventore cum consequuntur perspiciatis
+        porro vel nobis vero mollitia fugiat voluptatem dolorum illo aspernatur tempore ea cumque possimus veritatis
+        iste voluptatum, necessitatibus numquam. Eius deserunt aliquam rem, expedita cumque voluptatum, minima sed iusto
+        eligendi et autem odio. Libero a doloremque necessitatibus repudiandae temporibus minus quis ipsam ipsa
+        expedita.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quam enim, repellendus cupiditate fugit
+        voluptatum excepturi explicabo provident officiis aspernatur in, ex quos suscipit velit doloribus optio a iure
+        labore? Laudantium delectus architecto quia impedit dolorum maxime ipsum ut id ratione deleniti excepturi
+        facilis, quidem saepe illum ullam recusandae aperiam ipsam debitis. Inventore cum consequuntur perspiciatis
+        porro vel nobis vero mollitia fugiat voluptatem dolorum illo aspernatur tempore ea cumque possimus veritatis
+        iste voluptatum, necessitatibus numquam. Eius deserunt aliquam rem, expedita cumque voluptatum, minima sed iusto
+        eligendi et autem odio. Libero a doloremque necessitatibus repudiandae temporibus minus quis ipsam ipsa
+        expedita.
+    </p>
+</body>
+
+</html>
