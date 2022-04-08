@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes sample {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                background-color: coral;
+                transform: translateX(100px);
+            }
+
+            100% {
+                transform: translate(200px, 100px);
+            }
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #fff000;
+            border: 2px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: sample 2s linear calc(2) alternate forwards;
+            /* animation-name: sample; */
+            /* animation-duration: 2s; */
+            /* animation-iteration-count: calc(3); */
+            /* animation-direction: alternate; */
+            /* animation-fill-mode: forwards; */
+        }
+
+        .box:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes walk-ani {
+
+            /* 0% == from */
+            /* 100% == to */
+            to {
+                background-position: -990px;
+            }
+        }
+
+        .frame {
+            width: 125px;
+            height: 297px;
+            background-image: url("./asset/sprite-sheet-image-sprite-sheet-walking-panda-person-standing-female-hand-transparent-png-48989.png");
+            background-repeat: no-repeat;
+            background-position: -20px 0;
+            background-size: auto 297px;
+
+            animation-name: walk-ani;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: steps(8);
+        }
+
+        .frame:hover {
+            animation-direction: reverse;
+            animation-duration: 5s;
+
+        }
+    </style>
+</head>
+<!-- 
+    동작의 맥락이 바뀌는 것: 키 프레임 
+    좌로 이동하던 요소가 위로 이동 방향을 바꾸는 순간
+ -->
+
+<body>
+    <h1>Animation</h1>
+    <div class="box">BOX</div>
+    <div class="frame" />
+</body>
+
+</html>
